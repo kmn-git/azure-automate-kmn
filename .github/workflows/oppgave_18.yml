@@ -29,7 +29,7 @@ jobs:
         uses: azure/powershell@v1 
         with:
           inlineScript: |
-            Disconnect-AzAccount -Scope CurrenUser
+            Disconnect-AzAccount -Scope CurrentUser
             az Logout
             az cache purge
             az account clear
