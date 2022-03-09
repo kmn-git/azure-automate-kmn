@@ -19,13 +19,13 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: true
           
-      - name: Run cleanup script
+      - name: 'Run cleanup script'
         uses: azure/powershell@v1
         with:
           inlineScript: ./src/funcApp/cleanup.ps1 -resourceGroupName 'Kjell-Magne-workshop-hsfsl26amgekw'
           azPSVersion: "latest"
 
-      - name: Logout from azure/login
+      - name: 'Logout from azure'
         uses: azure/powershell@v1 
         with:
           inlineScript: |
